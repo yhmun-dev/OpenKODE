@@ -11,6 +11,34 @@ KD_API void KD_APIENTRY kdDeinit(void);
 
 KD_API void *KD_APIENTRY kdCalloc(KDsize num, KDsize size);
 
+KD_API void *KD_APIENTRY kdCalloc(KDsize num, KDsize size);
+
+KD_API KDchar *KD_APIENTRY kdStrrchr(const KDchar *str, KDint ch);
+
+KD_API KDint KD_APIENTRY kdStrcasecmp(const KDchar *str1, const KDchar *str2);
+
+KD_API KDint KD_APIENTRY kdStrncasecmp(const KDchar *str1, const KDchar *str2, KDsize maxlen);
+
+KD_API KDchar *KD_APIENTRY kdStrcat(KDchar *buf, const KDchar *src);
+
+KD_API KDchar *KD_APIENTRY kdStrncat(KDchar *buf, const KDchar *src, KDsize maxlen);
+
+KD_API KDchar *KD_APIENTRY kdStrcpy(KDchar *buf, const KDchar *src);
+
+KD_API KDchar *KD_APIENTRY kdStrncpy(KDchar *buf, const KDchar *src, KDsize maxlen);
+
+KD_API KDchar *KD_APIENTRY kdStrtok(KDchar *str, const KDchar *delim);
+
+KD_API KDchar *KD_APIENTRY kdStrstr(const KDchar *str1, const KDchar *str2);
+
+KD_API KDsize KD_APIENTRY kdStrspn(const KDchar *str1, const KDchar *str2);
+
+KD_API KDsize KD_APIENTRY kdStrcspn( const KDchar *str1, const KDchar *str2);
+
+KD_API KDchar *KD_APIENTRY kdStrdup(const KDchar *str);
+
+KD_API KDchar *KD_APIENTRY kdStrndup(const KDchar *str, KDsize maxlen);
+
 #ifdef __cplusplus
 }
 #endif
