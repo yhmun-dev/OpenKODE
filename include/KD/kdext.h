@@ -9,6 +9,8 @@ KD_API KDint KD_APIENTRY kdInit(int argc, char *argv[]);
 
 KD_API void KD_APIENTRY kdDeinit(void);
 
+KD_API void *KD_APIENTRY kdCalloc(KDsize num, KDsize size);
+
 #ifdef __cplusplus
 }
 #endif
