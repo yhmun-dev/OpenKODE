@@ -1,8 +1,10 @@
 #include <config.h>
 #include <KD/kd.h>
+#include <stdlib.h>
 
 KD_API KD_NORETURN void KD_APIENTRY kdExit(KDint status)
 {
+    exit(status);
 }
 
 KD_API KDint KD_APIENTRY kdInit(int argc, char *argv[])
