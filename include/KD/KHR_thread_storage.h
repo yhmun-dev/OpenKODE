@@ -11,8 +11,6 @@
 extern "C" {
 #endif
 
-
-
 /* KDThreadStorageKeyKHR: The representation of a thread storage key. */
 typedef KDuint32 KDThreadStorageKeyKHR;
 
@@ -24,6 +22,13 @@ KD_API KDint KD_APIENTRY kdSetThreadStorageKHR(KDThreadStorageKeyKHR key, void *
 
 /* kdGetThreadStorageKHR: Retrieves previously stored thread-local data. */
 KD_API void * KD_APIENTRY kdGetThreadStorageKHR(KDThreadStorageKeyKHR key);
+
+/*******************************************************
+ * Extensions
+ *******************************************************/
+KD_API KDint KD_APIENTRY kdCreateThreadStorageKHR(KDThreadStorageKeyKHR *key, void (*destructor)(void *));
+
+KD_API void KD_APIENTRY kdDeleteThreadStorageKHR(KDThreadStorageKeyKHR key);
 
 #ifdef __cplusplus
 }

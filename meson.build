@@ -23,6 +23,8 @@ endif
 
 cfg = configuration_data()
 cfg.set_quoted('LIBRARY_VERSION', proj_ver)
+cfg.set10('HAVE_THREADS_H', cc.has_header('threads.h'))
+cfg.set10('HAVE_PTHREAD_H', cc.has_header('pthread.h'))
 configure_file(
     output: 'config.h',
     configuration: cfg,
