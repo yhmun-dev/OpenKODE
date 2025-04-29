@@ -39,6 +39,28 @@ KD_API KDchar *KD_APIENTRY kdStrdup(const KDchar *str);
 
 KD_API KDchar *KD_APIENTRY kdStrndup(const KDchar *str, KDsize maxlen);
 
+KD_API KDint KD_APIENTRY kdTolower(KDint c);
+
+KD_API KDint KD_APIENTRY kdToupper(KDint c);
+
+KD_API KDint KD_APIENTRY kdIslower(KDint c);
+
+KD_API KDint KD_APIENTRY kdIsupper(KDint c);
+
+KD_API KDint KD_APIENTRY kdIsalpha(KDint c);
+
+KD_API KDint KD_APIENTRY kdIsdigit(KDint c);
+
+KD_API KDint KD_APIENTRY kdIsspace(KDint c);
+
+KD_API KDint KD_APIENTRY kdIsprint(KDint c);
+
+KD_API KDint KD_APIENTRY kdAtoi(const KDchar *str);
+
+KD_API KDfloat KD_APIENTRY kdAtof(const KDchar *str);
+
+KD_API KDdouble KD_APIENTRY kdAtod(const KDchar *str);
+
 #ifdef __cplusplus
 }
 #endif
