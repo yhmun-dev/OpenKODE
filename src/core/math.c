@@ -1,87 +1,88 @@
 #include <config.h>
 #include <KD/kd.h>
+#include <math.h>
 
 KD_API KDfloat32 KD_APIENTRY kdAcosf(KDfloat32 x)
 {
-    return 0;
+    return acosf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdAsinf(KDfloat32 x)
 {
-    return 0;
+    return asinf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdAtanf(KDfloat32 x)
 {
-    return 0;
+    return atanf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdAtan2f(KDfloat32 y, KDfloat32 x)
 {
-    return 0;
+    return atan2f(y, x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdCosf(KDfloat32 x)
 {
-    return 0;
+    return cosf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdSinf(KDfloat32 x)
 {
-    return 0;
+    return sinf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdTanf(KDfloat32 x)
 {
-    return 0;
+    return tanf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdExpf(KDfloat32 x)
 {
-    return 0;
+    return expf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdLogf(KDfloat32 x)
 {
-    return 0;
+    return logf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdFabsf(KDfloat32 x)
 {
-    return 0;
+    return fabsf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdPowf(KDfloat32 x, KDfloat32 y)
 {
-    return 0;
+    return powf(x, y);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdSqrtf(KDfloat32 x)
 {
-    return 0;
+    return sqrtf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdCeilf(KDfloat32 x)
 {
-    return 0;
+    return ceilf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdFloorf(KDfloat32 x)
 {
-    return 0;
+    return floorf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdRoundf(KDfloat32 x)
 {
-    return 0;
+    return roundf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdInvsqrtf(KDfloat32 x)
 {
-    return 0;
+    return 1.0f / sqrtf(x);
 }
 
 KD_API KDfloat32 KD_APIENTRY kdFmodf(KDfloat32 x, KDfloat32 y)
 {
-    return 0;
+    return fmodf(x, y);
 }

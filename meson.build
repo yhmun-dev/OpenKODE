@@ -36,6 +36,7 @@ configure_file(
 
 subdir('src/core')
 
+lib_deps = []
 if host_machine.system() == 'windows'
     core_lib = static_library(proj_name + '-core',
                     sources: core_srcs,
@@ -43,9 +44,11 @@ if host_machine.system() == 'windows'
                 install_dir: lib_dir,
                     install: true)
 else
+    lib_deps += cc.find_library('m', required: true)
     core_lib = library(proj_name + '-core',
                     sources: core_srcs,
         include_directories: inc_dirs,
+               dependencies: lib_deps,
                     version: proj_ver,
                   soversion: proj_ver.split('.')[0],
                 install_dir: lib_dir,
