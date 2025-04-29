@@ -11,8 +11,7 @@
 extern "C" {
 #endif
 
-
-typedef void *KDVaListKHR; /* example implementation only */
+typedef void *KDVaListKHR;
 
 /* kdSnprintfKHR, kdVsnprintfKHR, kdSprintfKHR, kdVsprintfKHR: Formatted output to a buffer. */
 KD_API KDint KD_APIENTRY kdSnprintfKHR(KDchar *buf, KDsize bufsize, const KDchar *format, ...);
