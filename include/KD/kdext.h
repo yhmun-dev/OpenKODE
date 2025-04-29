@@ -97,6 +97,28 @@ KD_API void KD_APIENTRY kdSync(void);
 
 KD_API KDint KD_APIENTRY kdIsatty(KDint fd);
 
+typedef struct KDTimeval
+{
+	KDint32 tv_sec;
+	KDint32 tv_usec;
+} KDTimeval;
+
+typedef struct KDTimezone
+{
+    KDint32 tz_minuteswest;
+    KDint32 tz_dsttime;
+} KDTimezone;
+
+KD_API KDint KD_APIENTRY kdGettimeofday(struct KDTimeval *tv, struct KDTimezone *tz);
+
+KD_API KDint KD_APIENTRY kdSettimeofday(const struct KDTimeval *tv, const struct KDTimezone *tz);
+
+KD_API KDdouble KD_APIENTRY kdDifftime(KDtime end, KDtime beginning);
+
+KD_API KDtime KD_APIENTRY kdMktime(struct KDTm *timeptr);
+
+KD_API KDtime KD_APIENTRY kdTimegm(struct KDTm *timeptr);
+
 #ifdef __cplusplus
 }
 #endif

@@ -489,6 +489,7 @@ typedef struct KDTm {
     KDint32 tm_year;
     KDint32 tm_wday;
     KDint32 tm_yday;
+    KDint32 tm_isdst;
 } KDTm;
 KD_API KDTm *KD_APIENTRY kdGmtime_r(const KDtime *timep, KDTm *result);
 KD_API KDTm *KD_APIENTRY kdLocaltime_r(const KDtime *timep, KDTm *result);
