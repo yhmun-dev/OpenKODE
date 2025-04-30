@@ -119,6 +119,8 @@ KD_API KDtime KD_APIENTRY kdMktime(struct KDTm *timeptr);
 
 KD_API KDtime KD_APIENTRY kdTimegm(struct KDTm *timeptr);
 
+KD_API const KDchar* KD_APIENTRY kdStrerror(KDint error);
+
 #ifdef __cplusplus
 }
 #endif
