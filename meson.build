@@ -22,7 +22,9 @@ if get_option('default_library') == 'static' or host_machine.system() == 'window
 endif
 
 cfg = configuration_data()
+cfg.set_quoted('LIBRARY_VENDOR', 'Younghwan Mun <yhmun0409@gmail.com>')
 cfg.set_quoted('LIBRARY_VERSION', proj_ver)
+cfg.set_quoted('LIBRARY_PLATFORM', '@0@ @1@'.format(host_machine.system(), host_machine.cpu_family()))
 cfg.set10('HAVE_THREADS_H', cc.has_header('threads.h'))
 cfg.set10('HAVE_PTHREAD_H', cc.has_header('pthread.h'))
 cfg.set10('HAVE_DIRENT_H', cc.has_header('dirent.h'))

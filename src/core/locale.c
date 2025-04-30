@@ -3,5 +3,5 @@
 
 KD_API const KDchar *KD_APIENTRY kdGetLocale(void)
 {
-    return KD_NULL;
+    return "en_CA";
 }
