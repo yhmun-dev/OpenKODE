@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-static void decompose_float(KDfloat32 f, KDint *sign, KDint *exponent, KDuint *mantissa)
+void decompose_float(KDfloat32 f, KDint *sign, KDint *exponent, KDuint *mantissa)
 {
     KDuint32 float_as_int;
 
@@ -16,7 +16,7 @@ static void decompose_float(KDfloat32 f, KDint *sign, KDint *exponent, KDuint *m
     *sign = float_as_int >> 31 & 1;
 }
 
-static KDfloat32 compose_float(KDuint sign, KDuint exponent, KDuint mantissa)
+KDfloat32 compose_float(KDuint sign, KDuint exponent, KDuint mantissa)
 {
     KDuint32  float_as_int = 0;
     KDfloat32 result;
@@ -29,7 +29,7 @@ static KDfloat32 compose_float(KDuint sign, KDuint exponent, KDuint mantissa)
     return result;
 }
 
-static KDboolean is_digit_for_base(KDchar const ch, KDint base)
+KDboolean is_digit_for_base(KDchar const ch, KDint base)
 {
     switch (ch)
     {
@@ -45,7 +45,7 @@ static KDboolean is_digit_for_base(KDchar const ch, KDint base)
     }
 }
 
-static KDint char_to_digit(KDchar ch)
+KDint char_to_digit(KDchar ch)
 {
     if (ch >= 97) {
         return ch - 97 + 10;

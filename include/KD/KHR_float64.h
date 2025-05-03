@@ -30,7 +30,7 @@ typedef double KDfloat64KHR;
 #define KD_DBL_EPSILON_KHR 2.2204460492503131e-16
 #define KD_DBL_MAX_KHR 1.7976931348623157e+308
 #define KD_DBL_MIN_KHR 2.2250738585072014e-308
-#define KD_HUGE_VAL_KHR (1.0/0.0)
+#define KD_HUGE_VAL_KHR kdHugeValKHR()
 #define KD_DEG_TO_RAD_KHR 0.01745329251994329577
 #define KD_RAD_TO_DEG_KHR 57.29577951308232088
 KD_API KDfloat64KHR KD_APIENTRY kdAcosKHR(KDfloat64KHR x);
@@ -57,6 +57,11 @@ KD_API KDfloat64KHR KD_APIENTRY kdStrtodKHR(const KDchar *s, KDchar **endptr);
 /* kdDtostrKHR: Convert a 64-bit float to a string. */
 #define KD_DTOSTR_MAXLEN_KHR 25
 KD_API KDssize KD_APIENTRY kdDtostrKHR(KDchar *buffer, KDsize buflen, KDfloat64KHR number);
+
+/*******************************************************
+ * Extensions
+ *******************************************************/
+KD_API KDfloat64KHR KD_APIENTRY kdHugeValKHR(void);
 
 #ifdef __cplusplus
 }
