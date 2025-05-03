@@ -30,7 +30,7 @@ typedef double                  KDdouble;
 #define KDSIZE_MAX              0xffffffffU
 #define KDUINTPTR_MAX           0xffffffffU
 #define KD_NORETURN
-#define KD_INFINITY             (1.0F/0.0F)
+#define KD_INFINITY             kdInfinity()
 //#define KD_WINDOW_SUPPORTED
 #ifdef KD_NDEBUG
 #define kdAssert(c)

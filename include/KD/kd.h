@@ -370,7 +370,7 @@ KD_API void KD_APIENTRY kdSetTLS(void *ptr);
 #define KD_FLT_MIN 1.17549435e-38F
 /* KD_INFINITY is defined in kdplatform.h since no portable definition
  * is possible. */
-#define kdIsNan(x) (((x) != (x)) ? 1 : 0)
+/* #define kdIsNan(x) (((x) != (x)) ? 1 : 0) */
 #define KD_HUGE_VALF KD_INFINITY
 #define KD_DEG_TO_RAD_F 0.0174532924F
 #define KD_RAD_TO_DEG_F 57.2957802F

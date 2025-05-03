@@ -97,6 +97,10 @@ KD_API void KD_APIENTRY kdSync(void);
 
 KD_API KDint KD_APIENTRY kdIsatty(KDint fd);
 
+KD_API KDint KD_APIENTRY kdIsNan(KDfloat32 x);
+
+KD_API KDfloat32 KD_APIENTRY kdInfinity(void);
+
 typedef struct KDTimeval
 {
 	KDint32 tv_sec;
