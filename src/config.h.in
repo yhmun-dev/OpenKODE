@@ -1,0 +1,19 @@
+#pragma once
+
+#define VENDOR                  "@VENDOR@"
+#define VERSION                 "@VERSION@"
+#define PLATFORM                "@PLATFORM@"
+#define PLATFORM_STORAGE        "@PLATFORM_STORAGE@"
+
+#define HAVE_DIRENT_H           @HAVE_DIRENT_H@
+#define HAVE_PTHREAD_H          @HAVE_PTHREAD_H@
+#define HAVE_SEMAPHORE_H        @HAVE_SEMAPHORE_H@
+#define HAVE_SYS_STATVFS_H      @HAVE_SYS_STATVFS_H@
+#define HAVE_SYS_TIME_H         @HAVE_SYS_TIME_H@
+#define HAVE_THREADS_H          @HAVE_THREADS_H@
+#define HAVE_UNISTD_H           @HAVE_UNISTD_H@
+
+#define HAVE_GETTIMEOFDAY       @HAVE_GETTIMEOFDAY@
+#define HAVE_SETTIMEOFDAY       @HAVE_SETTIMEOFDAY@
+#define HAVE_TIMEGM             @HAVE_TIMEGM@
+#define HAVE_TRUNCATE           @HAVE_TRUNCATE@

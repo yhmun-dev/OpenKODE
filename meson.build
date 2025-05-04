@@ -1,47 +1,33 @@
 project('openkode', 'c',
-          version: '0.1.0',
+          version: '1.0.3',
           license: 'MIT',
     license_files: 'LICENSE',
-    meson_version: '>= 1.1.0')
+    meson_version: '>= 1.2.0')
 
 proj_name = meson.project_name()
 proj_ver = meson.project_version()
 prefix = get_option('prefix')
-inc_dirs = include_directories('.', 'include')
+inc_dirs = include_directories('include', 'src')
 dat_dir = prefix / get_option('datadir')
 bin_dir = prefix / get_option('bindir')
 lib_dir = prefix / get_option('libdir')
 
 cc = meson.get_compiler('c')
+system = host_machine.system()
+subsystem = host_machine.subsystem()
+cpu_family = host_machine.cpu_family()
+
+g_args = []
 if get_option('b_ndebug') == 'true'
-    add_global_arguments('-DKD_NDEBUG', language: 'c')
+    g_args += '-DKD_NDEBUG'
 endif
 
-if get_option('default_library') == 'static' or host_machine.system() == 'windows'
-    add_global_arguments('-DKHRONOS_STATIC', language: 'c')
+if get_option('default_library') == 'static' or system == 'windows'
+    g_args += '-DKHRONOS_STATIC'
 endif
+add_global_arguments(g_args, language: 'c')
 
-cfg = configuration_data()
-cfg.set_quoted('LIBRARY_VENDOR', 'Younghwan Mun <yhmun0409@gmail.com>')
-cfg.set_quoted('LIBRARY_VERSION', proj_ver)
-cfg.set_quoted('LIBRARY_PLATFORM', '@0@ @1@'.format(host_machine.system(), host_machine.cpu_family()))
-cfg.set10('HAVE_THREADS_H', cc.has_header('threads.h'))
-cfg.set10('HAVE_PTHREAD_H', cc.has_header('pthread.h'))
-cfg.set10('HAVE_SEMAPHORE_H', cc.has_header('semaphore.h'))
-cfg.set10('HAVE_DIRENT_H', cc.has_header('dirent.h'))
-cfg.set10('HAVE_UNISTD_H', cc.has_header('unistd.h'))
-cfg.set10('HAVE_SYS_TIME_H', cc.has_header('sys/time.h'))
-cfg.set10('HAVE_SYS_STATVFS_H', cc.has_header('sys/statvfs.h'))
-cfg.set10('HAVE_TRUNCATE', cc.has_function('truncate'))
-cfg.set10('HAVE_TIMEGM', cc.has_function('timegm'))
-cfg.set10('HAVE_GETTIMEOFDAY', cc.has_function('gettimeofday'))
-cfg.set10('HAVE_SETTIMEOFDAY', cc.has_function('settimeofday'))
-configure_file(
-    output: 'config.h',
-    configuration: cfg,
-)
-
-subdir('src/core')
+subdir('src')
 
 lib_deps = []
 if host_machine.system() == 'windows'

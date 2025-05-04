@@ -12,11 +12,11 @@ KD_API const KDchar *KD_APIENTRY kdQueryAttribcv(KDint attribute)
     switch (attribute)
     {
         case KD_ATTRIB_VENDOR:
-            return LIBRARY_VENDOR;
+            return VENDOR;
         case KD_ATTRIB_VERSION:
-            return LIBRARY_VERSION;
+            return VERSION;
         case KD_ATTRIB_PLATFORM:
-            return LIBRARY_PLATFORM;
+            return PLATFORM;
         default:
             kdSetError(KD_EINVAL);
             return KD_NULL;
