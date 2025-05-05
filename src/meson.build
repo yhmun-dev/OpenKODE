@@ -13,8 +13,12 @@ cfg.set10('HAVE_SYS_TIME_H', cc.has_header('sys/time.h'))
 cfg.set10('HAVE_THREADS_H', cc.has_header('threads.h'))
 cfg.set10('HAVE_UNISTD_H', cc.has_header('unistd.h'))
 
+cfg.set10('HAVE_FMEMOPEN', cc.has_function('fmemopen'))
 cfg.set10('HAVE_GETTIMEOFDAY', cc.has_function('gettimeofday'))
 cfg.set10('HAVE_SETTIMEOFDAY', cc.has_function('settimeofday'))
+cfg.set10('HAVE_LINK', cc.has_function('link'))
+cfg.set10('HAVE_LSTAT', cc.has_function('lstat'))
+cfg.set10('HAVE_SYNC', cc.has_function('sync'))
 cfg.set10('HAVE_TIMEGM', cc.has_function('timegm'))
 cfg.set10('HAVE_TRUNCATE', cc.has_function('truncate'))
 

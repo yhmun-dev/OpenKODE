@@ -13,7 +13,11 @@
 #define HAVE_THREADS_H          @HAVE_THREADS_H@
 #define HAVE_UNISTD_H           @HAVE_UNISTD_H@
 
+#define HAVE_FMEMOPEN           @HAVE_FMEMOPEN@
 #define HAVE_GETTIMEOFDAY       @HAVE_GETTIMEOFDAY@
 #define HAVE_SETTIMEOFDAY       @HAVE_SETTIMEOFDAY@
+#define HAVE_LINK               @HAVE_LINK@
+#define HAVE_LSTAT              @HAVE_LSTAT@
+#define HAVE_SYNC               @HAVE_SYNC@
 #define HAVE_TIMEGM             @HAVE_TIMEGM@
 #define HAVE_TRUNCATE           @HAVE_TRUNCATE@
