@@ -11,7 +11,16 @@
 extern "C" {
 #endif
 
-typedef void *KDVaListKHR;
+#include <stdarg.h>
+
+typedef va_list KDVaListKHR;
+
+#define KD_VA_START_KHR(a, x)       va_start(a, x)
+#define KD_VA_ARG_INT32_KHR(a)      va_arg(a, KDint32)
+#define KD_VA_ARG_INT64_KHR(a)      va_arg(a, KDint64)
+#define KD_VA_ARG_FLOAT32_KHR(a)    va_arg(a, KDdouble)
+#define KD_VA_ARG_PTR_KHR(a)        va_arg(a, void *)
+#define KD_VA_END_KHR(a)            va_end(a)
 
 /* kdSnprintfKHR, kdVsnprintfKHR, kdSprintfKHR, kdVsprintfKHR: Formatted output to a buffer. */
 KD_API KDint KD_APIENTRY kdSnprintfKHR(KDchar *buf, KDsize bufsize, const KDchar *format, ...);
